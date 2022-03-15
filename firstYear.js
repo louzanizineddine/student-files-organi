@@ -1,4 +1,5 @@
 const fs = require("fs")
+const inquirer = require("inquirer");
 class ESTIN {
     constructor(year , semester) {
         this.year = year;

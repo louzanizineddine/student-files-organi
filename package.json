@@ -10,5 +10,8 @@
     "estin"
   ],
   "author": "Zineddine LOUZANI",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "inquirer": "^8.2.1"
+  }
 }
