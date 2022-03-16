@@ -1,4 +1,4 @@
-module.exports = [
+let data = [
     {
         id: 1,
         modules: [
@@ -57,3 +57,4 @@ module.exports = [
     }
 ]
 
+export default data;

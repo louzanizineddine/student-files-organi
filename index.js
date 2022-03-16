@@ -1,7 +1,9 @@
-const ESTIN = require('./ESTIN');
-const fs = require('fs');
-const os = require("os");
-const inquirer = require("inquirer");
+#!/usr/bin/env node 
+import ESTIN from './ESTIN.js';
+import fs from 'fs';
+import os from 'os';
+import inquirer from 'inquirer';
+
 
 let sudent= new ESTIN()
 

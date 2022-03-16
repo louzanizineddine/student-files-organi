@@ -1,6 +1,9 @@
-const fs = require("fs");
-const os = require("os");
-const modules =  require("./moduleInfo")
+
+import fs from 'fs';
+import os from 'os';
+import data from './moduleInfo.js';
+
+
 class ESTIN {
     constructor() {
         this.year = "";
@@ -25,7 +28,7 @@ class ESTIN {
         let id = this.getSemester(this.year , this.semester);
         console.log(id)
 
-        let filtredArray = modules.filter(function (el) {
+        let filtredArray = data.filter(function (el) {
             return el.id === id;
         })
         console.log(filtredArray)
@@ -60,4 +63,4 @@ class ESTIN {
 
 }
 
-module.exports = ESTIN
+export default ESTIN
