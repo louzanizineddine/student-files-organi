@@ -1,12 +1,34 @@
-const ESTIN = require('./firstYear');
+const ESTIN = require('./ESTIN');
 const fs = require('fs');
 const os = require("os");
-const {getInfo , studentInfoStudy} = require("./StudentInfo");
+const inquirer = require("inquirer");
 
-// let firstYearStudent = new ESTIN( "firstYear","first-semester");
-getInfo();
-console.log(studentInfoStudy)
-// firstYearStudent.createEstinDir();
-// firstYearStudent.yearDir()
-// firstYearStudent.semesterDir()
-// firstYearStudent.modules()
+let sudent= new ESTIN()
+
+inquirer
+    .prompt([
+        {
+            type: 'list',
+            name: 'yearQuestion',
+            message: 'In which year you are currently stuying?',
+            choices: ['1cp', '2cp' , '1cs'],
+        },
+        {
+            type: 'list',
+            name: 'semesterQuestion',
+            message: 'First or second semester',
+            choices: ['first_semester' , 'second_semester'],
+        },
+    ])
+    .then(answers => {
+        sudent.year = answers.yearQuestion;
+        sudent.semester = answers.semesterQuestion;
+        setUp()
+    });
+
+function setUp() {
+    sudent.createEstinDir();
+    sudent.yearDir();
+    sudent.semesterDir();
+    sudent.modules()
+}

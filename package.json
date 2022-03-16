@@ -1,11 +1,17 @@
 {
-  "name": "student-files-organi",
+  "name": "estin-student-files",
   "version": "1.0.0",
   "description": "a command line application to help estin students to orgnise their study files in a structured way ",
+  "type": "module",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/louzanizineddine/student-files-organi"
+  },
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
+  "bin": "./index.js",
   "keywords": [
     "estin"
   ],
