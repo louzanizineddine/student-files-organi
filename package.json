@@ -1,5 +1,5 @@
 {
-  "name": "estin-files",
+  "name": "estin-dir",
   "version": "1.0.0",
   "description": "a command line application to help estin students to orgnise their study files in a structured way ",
   "type": "module",

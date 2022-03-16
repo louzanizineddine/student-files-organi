@@ -26,7 +26,6 @@ class ESTIN {
 
     modules () {
         let id = this.getSemester(this.year , this.semester);
-        console.log(id)
 
         let filtredArray = data.filter(function (el) {
             return el.id === id;
